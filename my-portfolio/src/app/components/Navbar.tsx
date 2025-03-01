@@ -43,7 +43,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {isMenuOpen && (
-        <div className="md:hidden bg-gray-50 dark:bg-gray-800">
+        <div className="md:hidden bg-white dark:bg-gray-900">
           <ul className="flex flex-col items-center space-y-4 py-4">
             <Link href="#about" className="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500" onClick={handleMenuClick}>About</Link>
             <Link href="#experience" className="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500" onClick={handleMenuClick}>Experience</Link>

@@ -13,7 +13,7 @@ export default function Home() {
     
     {/* Left Content - About Description (2/3) */}
     <div className="md:w-2/3 pr-8">
-      <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800 dark:text-white">
+      <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
         Hi, I am Pratik Mishra
       </h1>
       <p className="text-lg mb-6 text-gray-600 dark:text-gray-300">
@@ -26,10 +26,11 @@ export default function Home() {
       </p>
       
       <div className="flex flex-wrap gap-4 mb-6">  {/* Add margin-bottom here */}
-        <a href="/Pratik Mishra Software Engineering.pdf" className="bg-gray-800 hover:bg-gray-100 text-white font-medium py-2 px-6 rounded-lg transition-colors">
+      <a href="/Pratik Mishra Software Engineering.pdf" className="bg-gray-900 hover:bg-white hover:text-black text-white font-medium py-2 px-6 rounded-lg transition-all duration-300 hover:shadow-lg">
+
           View Resume
         </a>
-        <a href="https://www.linkedin.com/in/pratik-mishraa/" className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-6 rounded-lg transition-colors dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white">
+        <a href="https://www.linkedin.com/in/pratik-mishraa/" className="bg-gray-900 hover:bg-white hover:text-black text-white font-medium py-2 px-6 rounded-lg transition-all duration-300 hover:shadow-lg">
           View LinkedIn
         </a>
       </div>
