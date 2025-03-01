@@ -59,25 +59,25 @@ export default function Home() {
             </p>
           </div>
         </section> */}
-<section id="experience" className="py-20 bg-gray-50">
+<section id="experience" className="py-20 bg-white">
   <div className="max-w-screen-lg mx-auto px-4">
-    <h2 className="text-3xl font-bold mb-8 text-center">Work Experience</h2>
+    <h2 className="text-3xl font-bold mb-8 text-center text-black">Work Experience</h2>
     
     {/* Experience Container - Centered */}
     <div className="flex justify-center">
-      <div className="bg-white rounded-lg shadow-md p-6 w-full max-w-2xl">
+      <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-2xl">
         
         {/* Company Header - Logo, Name, and Duration */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center space-x-4">
             <img src="/logo.jpg" alt="NSEIT Logo" className="w-18 h-12" />
-            <h3 className="text-xl font-semibold">NSEIT</h3>
+            <h3 className="text-xl font-semibold text-black">NSEIT</h3>
           </div>
-          <span className="text-gray-500 text-sm">Nov 2022 - Sept 2024</span>
+          <span className="text-gray-700 text-sm">Nov 2022 - Sept 2024</span>
         </div>
 
         {/* Description */}
-        <p className="text-gray-600 mb-4">
+        <p className="text-gray-800 mb-4">
           Worked as a Developer, focusing on building Java-based web applications, microservices, and front-end interfaces using React. Led the development of a Liferay-based portlet application that streamlined data visualization and reporting.
         </p>
       </div>
@@ -86,59 +86,54 @@ export default function Home() {
   </div>
 </section>
 
+<section id="skills" className="py-20 bg-white">
+  <div className="max-w-screen-xl mx-auto px-4">
+    <h2 className="text-3xl font-bold mb-8 text-center text-black">Skills</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Project cards will go here */}
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <h3 className="text-xl font-semibold text-black mb-2">Front End</h3>
+        <p className="text-gray-700 mb-4">HTML, Javascript, Angular, Reactjs, Nextjs</p>
+      </div>
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <h3 className="text-xl font-semibold text-black mb-2">Back End</h3>
+        <p className="text-gray-700 mb-4">Python, Java, Springboot, Liferay</p>
+      </div>
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <h3 className="text-xl font-semibold text-black mb-2">Databases</h3>
+        <p className="text-gray-700 mb-4">MySQL, PostgreSQL, MS-SQL</p>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section id="projects" className="py-20 bg-white">
+  <div className="max-w-screen-xl mx-auto px-4">
+    <h2 className="text-3xl font-bold mb-8 text-center text-black">My Projects</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Project cards will go here */}
+      <div className="bg-white rounded-lg shadow-lg p-6">
+        <h3 className="text-xl font-semibold text-black mb-2">Project Name</h3>
+        <p className="text-gray-700 mb-4">Short description of the project and technologies used.</p>
+        <div className="flex space-x-2">
+          <a href="#" className="text-blue-600 hover:underline">Demo</a>
+          <a href="#" className="text-blue-600 hover:underline">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section id="contact" className="py-20 bg-white">
+  <div className="max-w-screen-xl mx-auto px-4">
+    <h2 className="text-3xl font-bold mb-8 text-center text-black">Get In Touch</h2>
+    <div className="max-w-md mx-auto">
+      {/* Contact form will go here */}
+      <p className="text-center mb-4 text-gray-700">Email me at: <a href="mailto:pratikmishra2807@gmail.com" className="text-blue-600">pratikmishra2807@gmail.com</a></p>
+    </div>
+  </div>
+</section>
 
-        <section id="skills" className="py-20">
-          <div className="max-w-screen-xl mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center">Skills</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Project cards will go here */}
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-xl font-semibold mb-2">Front End</h3>
-                <p className="text-gray-600 mb-4">HTML, Javascript, Angular, Reactjs, Nextjs</p>
-
-              </div>
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-xl font-semibold mb-2">Back End</h3>
-                <p className="text-gray-600 mb-4">Python, Java, Springboot, Liferay</p>
-
-              </div>
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-xl font-semibold mb-2">Databases</h3>
-                <p className="text-gray-600 mb-4">MySQL, PostgreSQL, MS-SQL</p>
-
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="projects" className="py-20 bg-gray-50 ">
-          <div className="max-w-screen-xl mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center">My Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Project cards will go here */}
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-xl font-semibold mb-2">Project Name</h3>
-                <p className="text-gray-600 mb-4">Short description of the project and technologies used.</p>
-                <div className="flex space-x-2">
-                  <a href="#" className="text-blue-600 hover:underline">Demo</a>
-                  <a href="#" className="text-blue-600 hover:underline">GitHub</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" className="py-20 bg-gray-50 ">
-          <div className="max-w-screen-xl mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center">Get In Touch</h2>
-            <div className="max-w-md mx-auto">
-              {/* Contact form will go here */}
-              <p className="text-center mb-4">Email me at: <a href="mailto:pratikmishra2807@gmail.com" className="text-blue-600">pratikmishra2807@gmail.com</a></p>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </>
