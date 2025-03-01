@@ -4,7 +4,7 @@ import Navbar from './components/Navbar' // Ensure correct import path
 import Footer from './components/Footer' // Ensure correct import path
 
 export const metadata: Metadata = {
-  title: 'Pratik Mishra - Software Engineer Portfolio',
+  title: 'Pratik Mishra',
   description: 'Portfolio showcasing my software engineering projects and skills',
 }
 
