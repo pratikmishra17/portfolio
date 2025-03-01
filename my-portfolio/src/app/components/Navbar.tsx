@@ -32,7 +32,6 @@ export default function Navbar() {
             <Link href="#skills" className="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500">Skills</Link>
             <Link href="#projects" className="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500">Projects</Link>
             <Link href="#contact" className="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500">Contact</Link>
-            <Link href="/resume.pdf" target="_blank" className="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500">Resume</Link>
         </div>
 
         {/* Dark Mode Toggle on the Right */}
