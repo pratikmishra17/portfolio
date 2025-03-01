@@ -5,32 +5,46 @@ import Footer from './components/Footer';
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <main className="pt-20">
+      
+      <main className="">
         {/* Hero Section */}
         <section id="about" className="bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 py-20">
-          <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-800 dark:text-white">
-              Pratik Mishra
-            </h1>
-            <h2 className="text-xl md:text-2xl text-center mb-6 text-gray-600 dark:text-gray-300">
-              Software Engineer
-            </h2>
-            <p className="text-lg text-center max-w-2xl mb-8 text-gray-600 dark:text-gray-300">
-              Hi, I am Pratik Mishra, currently pursuing MS in Software Engineering from Cleveland State University.
-              I have over 2 years of professional work experience as a Java full stack developer building robust and scalable microservices and web applications.
+  <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+    
+    {/* Left Content - About Description (2/3) */}
+    <div className="md:w-2/3 pr-8">
+      <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800 dark:text-white">
+        Hi, I am Pratik Mishra
+      </h1>
+      <p className="text-lg mb-6 text-gray-600 dark:text-gray-300">
+        I'm currently pursuing MS in Software Engineering from Cleveland State University.
+        I have over 2 years of professional work experience as a Java full stack developer building robust and scalable microservices and web applications.
+        I am looking for new New Grad roles. &nbsp;
+        <a href="#contact" className="text-lg text-gray-800 hover:text-gray-400">
+          Hire me?
+        </a>
+      </p>
+      
+      <div className="flex flex-wrap gap-4">
+        <a href="/Pratik Mishra Software Engineering.pdf" className="bg-gray-800 hover:bg-gray-100 text-white font-medium py-2 px-6 rounded-lg transition-colors">
+          View Resume
+        </a>
+        <a href="https://www.linkedin.com/in/pratik-mishraa/" className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-6 rounded-lg transition-colors dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white">
+          View LinkedIn
+        </a>
+      </div>
+    </div>
 
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href="/Pratik Mishra Software Engineering.pdf" className="bg-gray-800 hover:bg-gray-100 text-white font-medium py-2 px-6 rounded-lg transition-colors">
-                View Resume
-              </a>
-              <a href="https://www.linkedin.com/in/pratik-mishraa/" className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-6 rounded-lg transition-colors dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white">
-                View LinkedIn
-              </a>
-            </div>
-          </div>
-        </section>
+    {/* Right Content - Profile Card (1/3) */}
+    <div className="">
+      <div className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 w-full max-w-2xl">
+        <img src="/photo.jpg" alt="Pratik Mishra" className="w-80 h-100 dark:border-gray-600" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
         {/* Placeholder sections - you'll build these out later */}
         {/* <section id="about" className="py-20">

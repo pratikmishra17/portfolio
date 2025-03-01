@@ -17,21 +17,21 @@ export default function Navbar() {
   }, [darkMode]);
 
   return (
-    <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+    <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b-0">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         
         {/* Logo on the Left */}
-        <Link href="/" className="text-2xl font-semibold dark:text-white">
-          PM
+        <Link href="/" className="text-gray-700 dark:text-white hover:text-gray-900 dark:hover:text-blue-500">
+          PRATIK MISHRA
         </Link>
 
         {/* Centered Menu Items */}
         <div className="hidden md:flex space-x-8">
-        <Link href="#about" className="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500">About</Link>
-            <Link href="#experience" className="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500">Experience</Link>
-            <Link href="#skills" className="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500">Skills</Link>
-            <Link href="#projects" className="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500">Projects</Link>
-            <Link href="#contact" className="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500">Contact</Link>
+        <Link href="#about" className="text-gray-700 dark:text-white hover:text-gray-900 dark:hover:text-blue-500">About</Link>
+            <Link href="#experience" className="text-gray-700 dark:text-white hover:text-gray-900 dark:hover:text-blue-500">Experience</Link>
+            <Link href="#skills" className="text-gray-700 dark:text-white hover:text-gray-900 dark:hover:text-blue-500">Skills</Link>
+            <Link href="#projects" className="text-gray-700 dark:text-white hover:text-gray-900 dark:hover:text-blue-500">Projects</Link>
+            <Link href="#contact" className="text-gray-700 dark:text-white hover:text-gray-900 dark:hover:text-blue-500">Contact</Link>
         </div>
 
         {/* Dark Mode Toggle on the Right */}
