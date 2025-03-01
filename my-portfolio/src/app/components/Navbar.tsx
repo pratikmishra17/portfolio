@@ -50,7 +50,6 @@ export default function Navbar() {
             <Link href="#skills" className="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500" onClick={handleMenuClick}>Skills</Link>
             <Link href="#projects" className="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500" onClick={handleMenuClick}>Projects</Link>
             <Link href="#contact" className="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500" onClick={handleMenuClick}>Contact</Link>
-            <Link href="/resume.pdf" target="_blank" className="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500" onClick={handleMenuClick}>Resume</Link>
           </ul>
         </div>
       )}
