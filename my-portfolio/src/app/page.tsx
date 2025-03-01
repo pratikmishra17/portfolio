@@ -25,7 +25,7 @@ export default function Home() {
         </a>
       </p>
       
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap gap-4 mb-6">  {/* Add margin-bottom here */}
         <a href="/Pratik Mishra Software Engineering.pdf" className="bg-gray-800 hover:bg-gray-100 text-white font-medium py-2 px-6 rounded-lg transition-colors">
           View Resume
         </a>
