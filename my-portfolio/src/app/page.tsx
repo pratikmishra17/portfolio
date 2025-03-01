@@ -88,7 +88,7 @@ export default function Home() {
 
         <section id="education" className="py-20 bg-white">
           <div className="max-w-screen-xl mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center">Education</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center text-black">Education</h2>
             <div>
               <h3 className="text-xl font-semibold italic text-black mb-2">Cleveland State University, Cleveland, Ohio</h3>
               <h3 className="text-xxl font-semibold italic text-gray-600 mb-2">Masters of Science in Software Engineering | Jan. 2025 - Dec. 2026</h3>
