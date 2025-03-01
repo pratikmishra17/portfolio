@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-gradient-to-b from-blue-100 to-blue-100 relative w-full z-20 border-b-0">
+    <nav className="bg-gradient-to-b from-blue-100 to-blue-50 relative w-full z-20 border-b-0">
 
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         

@@ -8,7 +8,7 @@ export default function Home() {
 
       <main className="">
         {/* Hero Section */}
-        <section id="about" className="bg-gradient-to-b from-blue-100 to-white py-20">
+        <section id="about" className="bg-gradient-to-b from-blue-50 to-white py-20">
           <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
 
             {/* Left Content - About Description (2/3) */}
@@ -33,10 +33,10 @@ export default function Home() {
               </p>
 
               <div className="flex flex-wrap gap-4 mb-6">
-                <a href="/Pratik Mishra Software Engineering.pdf" className="bg-gray-900 hover:bg-white hover:text-black text-white font-medium py-2 px-6 rounded-lg transition-all duration-300 hover:shadow-lg">
+                <a href="/Pratik Mishra Software Engineering.pdf" className="bg-gray-900 hover:bg-gray-300 hover:text-black text-white font-medium py-2 px-6 rounded-full transition-all duration-300 hover:shadow-lg">
                   View Resume
                 </a>
-                <a href="https://www.linkedin.com/in/pratik-mishraa/" className="bg-gray-900 hover:bg-white hover:text-black text-white font-medium py-2 px-6 rounded-lg transition-all duration-300 hover:shadow-lg">
+                <a href="https://www.linkedin.com/in/pratik-mishraa/" className="bg-gray-900 hover:bg-gray-300 hover:text-black text-white font-medium py-2 px-6 rounded-full transition-all duration-300 hover:shadow-lg">
                   View LinkedIn
                 </a>
               </div>
@@ -86,7 +86,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="education" className="py-20">
+        <section id="education" className="py-20 bg-white">
           <div className="max-w-screen-xl mx-auto px-4">
             <h2 className="text-3xl font-bold mb-8 text-center">Education</h2>
             <div>
@@ -94,7 +94,7 @@ export default function Home() {
               <h3 className="text-xxl font-semibold italic text-gray-600 mb-2">Masters of Science in Software Engineering | Jan. 2025 - Dec. 2026</h3>
               <h4 className="text-md italic text-gray-500 mb-2">Courses: Data Mining, Deep Learning, Artificial Inteligence, Software Engineering, Project Management, Software Quality Assurance</h4>
             </div>
-            <div>
+            <div className="py-8">
               <h3 className="text-xl font-semibold italic text-black mb-2">University of Mumbai, Mumbai, India</h3>
               <h3 className="text-xxl font-semibold italic text-gray-600 mb-2">Bachelors of Engineering in Information Technology | Aug. 2018 - Jun. 2022</h3>
               <h4 className="text-md italic text-gray-500 mb-2">Courses: Data Structures, Computer networks, Operating System, Cloud computing, Big Data Analysis</h4>
