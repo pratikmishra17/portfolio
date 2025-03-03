@@ -2,34 +2,32 @@
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
+
 export default function Home() {
   return (
     <>
 
       <main className="">
-        {/* Hero Section */}
+
         <section id="about" className="bg-gradient-to-b from-blue-50 to-white py-20">
           <div className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
 
-            {/* Left Content - About Description (2/3) */}
+
             <div className="md:w-2/3 pr-8">
               <h2 className="text-2xl md:text-4xl font-bold mb-4 text-gray-900">
-                Hello! I'm Pratik, a developer based in Cleveland, Ohio.
+                Hello! I'm Pratik,
               </h2>
               <p className="text-lg mb-6 text-gray-600">
-                I'm currently pursuing MS in Software Engineering from Cleveland State University.
-                I have over 2 years of professional work experience as a Java full stack developer building robust and scalable microservices and web applications, using
-                Java, Springboot, Angular, Liferay, Javascript and SQL with a strong hands on proficiency in Linux and git.
+                I am a graduate student at Cleveland State University pursuing MS in Software Engineering where I am deep diving and learning 
+                about areas of Artificial Intelligence, Machine Learning and building a deep understanding of how computers and software systems work. 
+                I have around 2 years of professional work experience as a full stack developer building and deploying production ready and scalable microservices in the financial domain, using
+                Java, Springboot, Angular, Liferay, Javascript and SQL with strong hands-on proficiency in Linux and git.
               </p>
               <p className="text-lg mb-6 text-gray-600">
-                I am looking for Internships and full time roles in AI/ML and Software Engineering. &nbsp;
-                <a
-                  href="#contact"
-                  className="relative inline-block text-lg text-gray-600 hover:text-gray-900">
-                  <span className="relative z-10">Hire me?</span>
-                  <span className="absolute inset-0 rounded-full border-2 border-blue-500 
-            animate-scribble w-full h-full -z-1"></span>
-                </a>
+                I am looking for Internships and full-time roles in AI/ML and Software Engineering.
+                <a href="#contact" className="underline-link ml-2 text-lg inline-block animate-bounce">Hire me?</a>
+
+
               </p>
 
               <div className="flex flex-wrap gap-4 mb-6">
@@ -42,7 +40,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Content - Profile Card (1/3) */}
+
             <div className="">
               <div className="bg-white rounded-xl shadow-xl p-4 w-auto">
                 <img src="/photo.jpg" alt="Pratik Mishra" className="w-80 h-100" />
@@ -58,7 +56,7 @@ export default function Home() {
           <div className="max-w-screen-lg mx-auto px-4">
             <h2 className="text-3xl font-bold mb-8 text-center text-black">Skills and Tools</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Project cards will go here */}
+
               <div className="bg-white rounded-lg shadow-xl hover:shadow-md p-6">
                 <h3 className="text-xl font-semibold text-black mb-2">Languages</h3>
                 <li className="text-gray-700 mb-4">Java</li>
@@ -93,13 +91,13 @@ export default function Home() {
           <div className="max-w-screen-lg mx-auto px-4">
             <h2 className="text-3xl font-bold mb-8 text-center text-black">Education</h2>
             <div>
-              <h3 className="text-xl font-semibold italic text-black mb-2">Cleveland State University, Cleveland, Ohio</h3>
+              <h3 className="text-xl font-semibold italic text-black mb-2">Cleveland State University - Cleveland, Ohio, USA</h3>
               <h3 className="text-xxl font-semibold italic text-gray-600 mb-2">Masters of Science in Software Engineering | Jan. 2025 - Dec. 2026</h3>
               <h4 className="text-md italic text-gray-500 mb-2">Courses: Data Mining, Deep Learning, Artificial Inteligence, Software Engineering, Project Management, Software Quality Assurance</h4>
             </div>
             <div className="py-8">
-              <h3 className="text-xl font-semibold italic text-black mb-2">University of Mumbai, Mumbai, India</h3>
-              <h3 className="text-xxl font-semibold italic text-gray-600 mb-2">Bachelors of Engineering in Information Technology | Aug. 2018 - Jun. 2022</h3>
+              <h3 className="text-xl font-semibold italic text-black mb-2">University of Mumbai - Mumbai, Maharashtra, India</h3>
+              <h3 className="text-xxl font-semibold italic text-gray-600 mb-2">Bachelor of Engineering in Information Technology | Aug. 2018 - Jun. 2022</h3>
               <h4 className="text-md italic text-gray-500 mb-2">Courses: Data Structures, Computer networks, Operating System, Cloud computing, Big Data Analysis</h4>
             </div>
           </div>
@@ -112,14 +110,17 @@ export default function Home() {
             <div className="pb-6">
               <div className="flex justify-between mb-2">
                 <h3 className="text-xl font-semibold text-black">NSEIT Ltd.</h3>
-                <img src="/logo.jpg" alt="NSEIT Logo" className="w-20 h-12 object-contain" />
+                <img src="/logo.jpg" alt="NSEIT Logo" className="w-20 h-8 object-contain" />
               </div>
-              <h3 className="text-lg text-gray-500 mt-2">
+              <h3 className="text-lg text-gray-500">
                 Software Developer | Mumbai, India | Nov. 2022 - Sept. 2024
               </h3>
-              <h4 className="text-md text-gray-900 mt-1">
-                Courses: Data Structures, Computer Networks, Operating Systems, Cloud Computing, Big Data Analysis
-              </h4>
+              {/* <li className="text-gray-700 py-4"></li>
+              <li className="text-gray-700 mb-4"></li>
+              <li className="text-gray-700 mb-4"></li>
+              <li className="text-gray-700 mb-4"></li>
+              <li className="text-gray-700 mb-4"></li> */}
+
             </div>
           </div>
         </section>
@@ -128,11 +129,11 @@ export default function Home() {
 
 
 
-        <section id="projects" className="py-20 bg-white">
+        {/* <section id="projects" className="py-20 bg-white">
           <div className="max-w-screen-lg mx-auto px-4">
             <h2 className="text-3xl font-bold mb-8 text-center text-black">My Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Project cards will go here */}
+
               <div className="bg-white rounded-lg shadow-lg p-6">
                 <h3 className="text-xl font-semibold text-black mb-2">Project Name</h3>
                 <p className="text-gray-700 mb-4">Short description of the project and technologies used.</p>
@@ -143,13 +144,13 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section id="contact" className="py-20 bg-white">
           <div className="max-w-screen-lg mx-auto px-4">
             <h2 className="text-3xl font-bold mb-8 text-center text-black">Get In Touch</h2>
             <div className="max-w-md mx-auto">
-              {/* Contact form will go here */}
+
               <p className="text-center mb-4 text-gray-700">Email me at: <a href="mailto:p.mishra23@vikes.csuohio.edu" className=" font-semibold text-gray-600">p.mishra23@vikes.csuohio.edu</a></p>
             </div>
             <div className="flex justify-center items-center">

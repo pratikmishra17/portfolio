@@ -1,11 +1,11 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import Navbar from './components/Navbar' // Ensure correct import path
-import Footer from './components/Footer' // Ensure correct import path
+import Navbar from './components/Navbar' 
+import Footer from './components/Footer' 
 
 export const metadata: Metadata = {
   title: 'Pratik Mishra',
-  description: 'Portfolio showcasing my software engineering projects and skills',
+  description: 'Website portfolio showcasing my skills and experience as a software developer',
 }
 
 export default function RootLayout({
@@ -16,12 +16,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* Use the Navbar component instead of the hardcoded navbar */}
+        
         <Navbar />
         
         <main>{children}</main>
 
-        {/* Use the Footer component */}
        
       </body>
     </html>

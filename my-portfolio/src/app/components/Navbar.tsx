@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-gradient-to-b from-blue-100 to-blue-50 relative w-full z-20 border-b-0">
+    <nav className="relative w-full z-20 border-b-0 bg-gradient-to-b from-blue-100 to-blue-50">
 
       <div className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         
@@ -23,11 +23,12 @@ export default function Navbar() {
 
         {/* Centered Menu Items */}
         <div className="hidden md:flex space-x-8">
-          <Link href="#about" className="text-gray-700 hover:text-gray-900 ">About</Link>
-          <Link href="#experience" className="text-gray-700 hover:text-gray-900 ">Experience</Link>
-          <Link href="#skills" className="text-gray-700 hover:text-gray-900 ">Skills</Link>
-          <Link href="#projects" className="text-gray-700 hover:text-gray-900 ">Projects</Link>
-          <Link href="#contact" className="text-gray-700 hover:text-gray-900 ">Contact</Link>
+          <Link href="#about" className="underline-link text-gray-700 hover:text-gray-900 ">About</Link>
+          <Link href="#experience" className="underline-link text-gray-700 hover:text-gray-900 ">Skills</Link>
+          <Link href="#skills" className="underline-link text-gray-700 hover:text-gray-900 ">Education</Link>
+          {/* <Link href="#projects" className="underline-link text-gray-700 hover:text-gray-900">Projects</Link> */}
+          <Link href="#contact" className="underline-link text-gray-700 hover:text-gray-900 ">Experience</Link>
+          <Link href="#contact" className="underline-link text-gray-700 hover:text-gray-900 ">Contact</Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -44,12 +45,12 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {isMenuOpen && (
-        <div className="md:hidden bg-gradient-to-b from-blue-50 to-blue-50">
+        <div className="absolute top-16 left-0 w-full bg-gradient-to-b from-blue-50 to-blue-50 shadow-lg">
           <ul className="flex flex-col items-center space-y-4 py-4">
             <Link href="#about" className="text-gray-900 hover:text-blue-700 " onClick={handleMenuClick}>About</Link>
-            <Link href="#experience" className="text-gray-900 hover:text-blue-700 " onClick={handleMenuClick}>Experience</Link>
-            <Link href="#skills" className="text-gray-900 hover:text-blue-700 " onClick={handleMenuClick}>Skills</Link>
-            <Link href="#projects" className="text-gray-900 hover:text-blue-700 " onClick={handleMenuClick}>Projects</Link>
+            <Link href="#experience" className="text-gray-900 hover:text-blue-700 " onClick={handleMenuClick}>Skills</Link>
+            <Link href="#skills" className="text-gray-900 hover:text-blue-700 " onClick={handleMenuClick}>Education</Link>
+            <Link href="#projects" className="text-gray-900 hover:text-blue-700 " onClick={handleMenuClick}>Experience</Link>
             <Link href="#contact" className="text-gray-900 hover:text-blue-700 " onClick={handleMenuClick}>Contact</Link>
           </ul>
         </div>
