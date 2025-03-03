@@ -13,14 +13,14 @@ export default function Home() {
           <div className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
 
 
-            <div className="md:w-2/3 pr-8">
+            <div className="pr-8">
               <h2 className="text-2xl md:text-4xl font-bold mb-4 text-gray-900">
               <span className="typewriting">Hello! I'm Pratik,</span>
               </h2>
               <p className="text-lg mb-6 text-gray-600">
                 I am a graduate student at Cleveland State University pursuing MS in Software Engineering where I am learning and deep diving 
                 into the areas of Artificial Intelligence, Machine Learning and building a strong understanding of how computers and software systems work. 
-                I have around 2 years of professional work experience as a full stack developer building and deploying production ready and scalable microservices in the financial domain, using
+                I specialize in making responsive and interactive webites and web applications and have around 2 years of professional work experience as a full stack developer building and deploying production ready and scalable microservices in the financial domain, using
                 Java, Springboot, Angular, Liferay, Javascript and SQL with strong hands-on proficiency in Linux and git.
               </p>
               <p className="text-lg mb-6 text-gray-600">
@@ -41,11 +41,11 @@ export default function Home() {
             </div>
 
 
-            <div className="">
+            {/* <div className="">
               <div className="bg-white rounded-xl shadow-xl p-4 w-auto">
                 <img src="/photo.jpg" alt="Pratik Mishra" className="w-80 h-100" />
               </div>
-            </div>
+            </div> */}
 
           </div>
         </section>
