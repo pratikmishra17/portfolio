@@ -21,9 +21,9 @@ export default function Home() {
                 I am a graduate student at Cleveland State University pursuing MS in Software Engineering where I am learning and deep diving 
                 into the areas of Artificial Intelligence, Machine Learning and building a strong understanding of how computers and software systems work. 
                 I specialize in making responsive and interactive webites and web applications and have around 2 years of professional work experience as a full stack developer building and deploying production ready and scalable microservices in the financial domain, using
-                Java, Springboot, Angular, Liferay, Javascript and SQL with strong hands-on proficiency in Linux and git.
+                Java, Springboot, Angular, Liferay, Javascript and SQL with strong hands-on proficiency in Linux and git. 
               </p>
-              <p className="text-lg mb-6 text-gray-600">
+              <p className="text-lg mb-6 text-gray-600 ">
                 I am looking for Internships and full-time roles in AI/ML and Software Engineering.
                 <a href="#contact" className="underline-link ml-2 text-lg inline-block animate-bounce">Hire me?</a>
 
@@ -92,7 +92,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-8 text-center text-black">Education</h2>
             <div>
               <h3 className="text-xl font-semibold italic text-black mb-2">Cleveland State University - Cleveland, Ohio, USA</h3>
-              <h3 className="text-xxl font-semibold italic text-gray-600 mb-2">Masters of Science in Software Engineering | Jan. 2025 - Dec. 2026</h3>
+              <h3 className="text-xxl font-semibold italic text-gray-600 mb-2">Master of Science in Software Engineering | Jan. 2025 - Dec. 2026</h3>
               <h4 className="text-md italic text-gray-500 mb-2">Courses: Data Mining, Deep Learning, Artificial Inteligence, Software Engineering, Project Management, Software Quality Assurance</h4>
             </div>
             <div className="py-8">

@@ -113,6 +113,25 @@ html {
   
 }
 
+/* @keyframes highlight {
+  from {
+    background-size: 0% 100%;
+  }
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+.highlight {
+  background-color: ran;
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+  padding: 0 4px;
+  border-radius: 4px;
+  animation: highlight 5s ease-in-out forwards;
+} */
+
 
 
 
