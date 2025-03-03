@@ -15,11 +15,11 @@ export default function Home() {
 
             <div className="md:w-2/3 pr-8">
               <h2 className="text-2xl md:text-4xl font-bold mb-4 text-gray-900">
-                Hello! I'm Pratik,
+              <span className="typewriting">Hello! I'm Pratik,</span>
               </h2>
               <p className="text-lg mb-6 text-gray-600">
-                I am a graduate student at Cleveland State University pursuing MS in Software Engineering where I am deep diving and learning 
-                about areas of Artificial Intelligence, Machine Learning and building a deep understanding of how computers and software systems work. 
+                I am a graduate student at Cleveland State University pursuing MS in Software Engineering where I am learning and deep diving 
+                into the areas of Artificial Intelligence, Machine Learning and building a strong understanding of how computers and software systems work. 
                 I have around 2 years of professional work experience as a full stack developer building and deploying production ready and scalable microservices in the financial domain, using
                 Java, Springboot, Angular, Liferay, Javascript and SQL with strong hands-on proficiency in Linux and git.
               </p>

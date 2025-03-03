@@ -82,6 +82,37 @@ html {
 }
 
 
+/* Typewriting effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typewriting {
+  display: inline-block;
+  overflow: hidden; 
+  white-space: nowrap;
+  width: 0; 
+  animation: typing 4s steps(60) 0.5s 1 normal both; 
+  
+}
+
+.typewriting:after {
+  content: '';
+  animation: blink 0.75s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+  
+}
+
 
 
 
