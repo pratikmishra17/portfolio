@@ -13,22 +13,21 @@ export default function Navbar() {
 
   return (
     <nav className="relative w-full z-20 border-b-0 bg-gradient-to-b from-blue-100 to-blue-50">
-
       <div className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         
         {/* Logo on the Left */}
-        <Link href="/" className="text-gray-700 hover:text-gray-900 ">
-          PRATIK MISHRA
+        <Link href="/" className="text-gray-700 font-bold hover:text-gray-900 ">
+          PM
         </Link>
 
-        {/* Centered Menu Items */}
-        <div className="hidden md:flex space-x-8">
-          <Link href="#about" className="underline-link text-gray-700 hover:text-gray-900 ">About</Link>
-          <Link href="#experience" className="underline-link text-gray-700 hover:text-gray-900 ">Skills</Link>
-          <Link href="#skills" className="underline-link text-gray-700 hover:text-gray-900 ">Education</Link>
-          {/* <Link href="#projects" className="underline-link text-gray-700 hover:text-gray-900">Projects</Link> */}
-          <Link href="#contact" className="underline-link text-gray-700 hover:text-gray-900 ">Experience</Link>
-          <Link href="#contact" className="underline-link text-gray-700 hover:text-gray-900 ">Contact</Link>
+        {/* Centered Menu Items with Theme Toggle */}
+        <div className="hidden md:flex space-x-8 items-center">
+          <Link href="#about" className="underline-link text-gray-700 hover:text-gray-900">About</Link>
+          <Link href="#experience" className="underline-link text-gray-700 hover:text-gray-900">Skills</Link>
+          <Link href="#skills" className="underline-link text-gray-700 hover:text-gray-900">Education</Link>
+          <Link href="#experience" className="underline-link text-gray-700 hover:text-gray-900">Experience</Link>
+          <Link href="#footer" className="underline-link text-gray-700 hover:text-gray-900">Contact</Link>
+          
         </div>
 
         {/* Mobile Menu Button */}
@@ -47,11 +46,11 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="absolute top-16 left-0 w-full bg-gradient-to-b from-blue-50 to-blue-50 shadow-lg">
           <ul className="flex flex-col items-center space-y-4 py-4">
-            <Link href="#about" className="text-gray-900 hover:text-blue-700 " onClick={handleMenuClick}>About</Link>
-            <Link href="#experience" className="text-gray-900 hover:text-blue-700 " onClick={handleMenuClick}>Skills</Link>
-            <Link href="#skills" className="text-gray-900 hover:text-blue-700 " onClick={handleMenuClick}>Education</Link>
-            <Link href="#projects" className="text-gray-900 hover:text-blue-700 " onClick={handleMenuClick}>Experience</Link>
-            <Link href="#contact" className="text-gray-900 hover:text-blue-700 " onClick={handleMenuClick}>Contact</Link>
+            <Link href="#about" className="text-gray-900 hover:text-blue-700" onClick={handleMenuClick}>About</Link>
+            <Link href="#experience" className="text-gray-900 hover:text-blue-700" onClick={handleMenuClick}>Skills</Link>
+            <Link href="#skills" className="text-gray-900 hover:text-blue-700" onClick={handleMenuClick}>Education</Link>
+            <Link href="#projects" className="text-gray-900 hover:text-blue-700" onClick={handleMenuClick}>Experience</Link>
+            <Link href="#contact" className="text-gray-900 hover:text-blue-700" onClick={handleMenuClick}>Contact</Link>
           </ul>
         </div>
       )}
