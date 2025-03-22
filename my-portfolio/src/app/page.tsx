@@ -114,18 +114,19 @@ export default function Home() {
               <h2 className="text-3xl font-bold mb-8 text-center text-black">Work Experience</h2>
 
               <div className="pb-6">
-                <div className="flex justify-between mb-2">
+                <div className="flex justify-between">
                   <h3 className="text-xl font-semibold text-black">NSEIT Ltd.</h3>
                   <img src="/logo.jpg" alt="NSEIT Logo" className="w-20 h-8 object-contain" />
                 </div>
-                <h3 className="text-lg text-gray-500">
+                <h3 className="text-gray-500">
                   Software Developer | Mumbai, India | Nov. 2022 - Sept. 2024
                 </h3>
-                {/* <li className="text-gray-700 py-4"></li>
-              <li className="text-gray-700 mb-4"></li>
-              <li className="text-gray-700 mb-4"></li>
-              <li className="text-gray-700 mb-4"></li>
-              <li className="text-gray-700 mb-4"></li> */}
+                <li className="text-gray-700">Developed and deployed end-to-end Spring Boot microservice applications in UAT and production environments—leveraging Liferay DXP, PostgreSQL, and Linux—to modernize legacy systems and boost performance.</li>
+              <li className="text-gray-700">Optimized Chart.js components to render real-time stock market data, achieving a 50% reduction in load times compared to Kibana and enhancing user experience.</li>
+              <li className="text-gray-700">Streamlined API architecture to reduce database load by 40%, significantly improving system responsiveness.</li>
+              <li className="text-gray-700">Collaborated with cross-functional teams to migrate critical web services from AWS to on-premise infrastructure, cutting operational costs by over 70% while ensuring data integrity and minimal downtime.</li>
+              <li className="text-gray-700">Assisted in setting up and configuring a comprehensive content management system with Drupal, streamlining web content updates and reducing dependency on technical teams.</li>
+              <li className="text-gray-700">Provided post go-live support to ensure high system availability and rapid resolution of production issues.</li>
 
               </div>
             </div>
