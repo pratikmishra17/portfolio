@@ -13,7 +13,7 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({ children, offset = 50
       initial={{ opacity: 0, y: offset }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }} // Adjust `amount` to control when the animation triggers
-      transition={{ duration: 1, ease: "easeIn" }}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
       className="w-full"
     >
       {children}
