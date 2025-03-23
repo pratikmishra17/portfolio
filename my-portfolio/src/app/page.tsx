@@ -58,62 +58,62 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
               <div className="bg-white shadow-lg shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">
-                <h3 className="text-xl font-semibold mb-4">Languages</h3>
+                <h3 className="text-xl font-semibold text-black mb-4">Languages</h3>
                 <div className="flex flex-wrap gap-2">
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">Java</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">Python</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">JavaScript</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">TypeScript</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">SQL</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">HTML & CSS</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">Java</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">Python</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">JavaScript</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">TypeScript</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">SQL</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">HTML & CSS</span>
                 </div>
               </div>
               <div className="bg-white shadow-lg shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">
                 <h3 className="text-xl font-semibold text-black mb-2">Backend</h3>
                 <div className="flex flex-wrap gap-2">
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">Springboot</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">Liferay DXP</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">REST API</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">Node.js</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">Springboot</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">Liferay DXP</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">REST API</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">Node.js</span>
                 </div>
               </div>
               <div className="bg-white shadow-lg shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">
                 <h3 className="text-xl font-semibold text-black mb-2">Frontend</h3>
                 <div className="flex flex-wrap gap-2">
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">Angular</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">React.js</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">Chart.js</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">Tailwind CSS</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">Bootstrap CSS</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">Angular</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">React.js</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">Chart.js</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">Tailwind CSS</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">Bootstrap CSS</span>
                 </div>
               </div>
               <div className="bg-white shadow-lg shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">
                 <h3 className="text-xl font-semibold text-black mb-2">Database</h3>
                 <div className="flex flex-wrap gap-2">
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">MySQL</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">PostgreSQL</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">MS-SQL</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">Oracle DB</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">Elasticsearch</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">MySQL</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">PostgreSQL</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">MS-SQL</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">Oracle DB</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">Elasticsearch</span>
                 </div>
               </div>
               <div className="bg-white shadow-lg shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">
                 <h3 className="text-xl font-semibold text-black mb-2">Libraries/Frameworks</h3>
                 <div className="flex flex-wrap gap-2">
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">Java Collection Framework</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">Sickit-learn</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">Pytorch</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">Pandas</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">Java Collection Framework</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">Sickit-learn</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">Pytorch</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">Pandas</span>
                 </div>
               </div>
               <div className="bg-white shadow-lg shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">
                 <h3 className="text-xl font-semibold text-black mb-2">DevOps/Cloud</h3>
                 <div className="flex flex-wrap gap-2">
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">AWS</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">Linux servers</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">Cron jobs</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">Shell Scripting</span>
-                  <span className="inline-block bg-gray-300 px-3 py-1 rounded-full text-md">Drupal</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">AWS</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">Linux servers</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">Cron jobs</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">Shell Scripting</span>
+                  <span className="inline-block text-black bg-gray-300 px-3 py-1 rounded-full text-md">Drupal</span>
                 </div>
               </div>
             </div>
@@ -156,16 +156,16 @@ export default function Home() {
                 </p>
               </div>
               <div className='mb-4'>
-                <h4 className="text-sm font-semibold mb-2">Tech Stack:</h4>
+                <h4 className="text-sm text-black font-semibold mb-2">Tech Stack:</h4>
                 <div className="flex flex-wrap gap-2">
-                  <span className="text-xs px-2 py-1 bg-white shadow-sm shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">Java</span>
-                  <span className="text-xs px-2 py-1 bg-white shadow-sm shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">Springboot</span>
-                  <span className="text-xs px-2 py-1 bg-white shadow-sm shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">Liferay</span>
-                  <span className="text-xs px-2 py-1 bg-white shadow-sm shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">Javascript</span>
-                  <span className="text-xs px-2 py-1 bg-white shadow-sm shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">SQL</span>
+                  <span className="text-xs text-black px-2 py-1 bg-white shadow-sm shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">Java</span>
+                  <span className="text-xs text-black px-2 py-1 bg-white shadow-sm shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">Springboot</span>
+                  <span className="text-xs text-black px-2 py-1 bg-white shadow-sm shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">Liferay</span>
+                  <span className="text-xs text-black px-2 py-1 bg-white shadow-sm shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">Javascript</span>
+                  <span className="text-xs text-black px-2 py-1 bg-white shadow-sm shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">SQL</span>
                 </div>
               </div>
-              <h4 className="text-sm font-semibold mb-2">Key Responsibilities:</h4>
+              <h4 className="text-sm text-black font-semibold mb-2">Key Responsibilities:</h4>
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
                 <li>
                   Developed and deployed end-to-end Spring Boot microservice applications in UAT and production environments—leveraging Liferay DXP, PostgreSQL, and Linux—to modernize legacy systems and boost performance.
