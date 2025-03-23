@@ -58,10 +58,10 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-8 text-center text-black">Technical Skills</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-              <div className="bg-white shadow-lg shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none bg-white hover:inset-shadow-sm inset-shadow-gray-500">
+              <div className="bg-white shadow-lg shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none bg-white hover:inset-shadow-sm inset-shadow-gray-500 flex flex-col min-h-[200px]">
                 <h3 className="text-xl font-semibold text-black mb-4">Languages</h3>
                 <div className="flex flex-wrap gap-2">
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg ">Java</span>
+                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Java</span>
                   <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Python</span>
                   <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">JavaScript</span>
                   <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">TypeScript</span>
@@ -88,7 +88,7 @@ export default function Home() {
                   <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Bootstrap CSS</span>
                 </div>
               </div>
-              <div className="bg-white shadow-lg shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">
+              <div className="bg-white shadow-lg shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500 flex flex-col min-h-[200px]">
                 <h3 className="text-xl font-semibold text-black mb-2">Database</h3>
                 <div className="flex flex-wrap gap-2">
                   <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">MySQL</span>
