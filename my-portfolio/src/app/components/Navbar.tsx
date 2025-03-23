@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { FaSun, FaMoon } from 'react-icons/fa';
-import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
