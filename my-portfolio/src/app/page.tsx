@@ -31,13 +31,13 @@ export default function Home() {
               </p>
 
               <div className="flex flex-wrap gap-4 mb-6">
-                <a href="/Pratik Mishra Software Engineering.pdf" className="bg-black text-white font-medium py-2 px-6 rounded-full shadow-lg shadow-gray-500/50 hover:bg-white hover:text-black hover:shadow-none hover:inset-shadow-sm inset-shadow-black">
+                <a href="/Pratik Mishra Software Engineering.pdf" className="bg-black text-white font-medium py-2 px-6 rounded-full shadow-md shadow-gray-500 hover:bg-white hover:text-black hover:shadow-none hover:inset-shadow-sm inset-shadow-black">
                   View Resume
                 </a>
-                <a href="https://www.linkedin.com/in/pratik-mishraa/" target="_blank" className="bg-black text-white font-medium py-2 px-6 rounded-full shadow-lg shadow-gray-500/50 hover:bg-white hover:text-black hover:shadow-none hover:inset-shadow-sm inset-shadow-black">
+                <a href="https://www.linkedin.com/in/pratik-mishraa/" target="_blank" className="bg-black text-white font-medium py-2 px-6 rounded-full shadow-md shadow-gray-500 hover:bg-white hover:text-black hover:shadow-none hover:inset-shadow-sm inset-shadow-black">
                   View LinkedIn
                 </a>
-                <a href="https://github.com/pratikmishra17" target="_blank" className="bg-black text-white font-medium py-2 px-6 rounded-full shadow-lg shadow-gray-500/50 hover:bg-white hover:text-black hover:shadow-none hover:inset-shadow-sm inset-shadow-black">
+                <a href="https://github.com/pratikmishra17" target="_blank" className="bg-black text-white font-medium py-2 px-6 rounded-full shadow-md shadow-gray-500 hover:bg-white hover:text-black hover:shadow-none hover:inset-shadow-sm inset-shadow-black">
                   View Github
                 </a>
               </div>
