@@ -30,9 +30,9 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mt-4 text-center text-gray-800 text-sm">
+{/*       <div className="mt-4 text-center text-gray-800 text-sm">
         <p>Made with ❤️ by Pratik Mishra</p>
-      </div>
+      </div> */}
     </footer>
   );
 }
