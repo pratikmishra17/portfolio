@@ -105,6 +105,7 @@ export default function Home() {
                   <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Sickit-learn</span>
                   <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Pytorch</span>
                   <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Pandas</span>
+                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Numpy</span>
                 </div>
               </div>
               <div className="bg-white shadow-lg shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">
@@ -128,7 +129,8 @@ export default function Home() {
             <div>
               <h3 className="text-xl font-semibold italic text-black mb-2">Cleveland State University - Cleveland, Ohio, USA</h3>
               <h3 className="text-xxl font-semibold italic text-gray-600 mb-2">Master of Science in Software Engineering | Jan. 2025 - Dec. 2026</h3>
-              <h4 className="text-md italic text-gray-500 mb-2">Courses: Data Mining, Deep Learning, Artificial Inteligence, Software Engineering, Project Management, Software Quality Assurance</h4>
+              <h4 className="text-xxl font-semibold italic text-gray-600 mb-2">GPA - 4.00 </h4>
+              <h4 className="text-md italic text-gray-500 mb-2">Courses: Data Mining, Deep Learning and Machine Learning, Database Systems and Processes, Artificial Inteligence, Software Engineering, Project Management, Software Quality Assurance</h4>
             </div>
             <div className="py-8">
               <h3 className="text-xl font-semibold italic text-black mb-2">University of Mumbai - Mumbai, Maharashtra, India</h3>
