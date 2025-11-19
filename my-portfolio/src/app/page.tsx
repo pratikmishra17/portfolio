@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   Github, 
@@ -125,7 +127,6 @@ const Hero = () => {
       ref={containerRef}
       className="relative min-h-screen flex items-center justify-center bg-zinc-950 overflow-hidden pt-16"
     >
-      {/* Static Grid Background */}
       <div 
         className="absolute inset-0 z-0"
         style={{
@@ -135,7 +136,6 @@ const Hero = () => {
         }}
       ></div>
 
-      {/* Interactive Spotlight Overlay */}
       <div 
         className="absolute inset-0 z-0 transition-opacity duration-300"
         style={{
@@ -143,7 +143,6 @@ const Hero = () => {
         }}
       ></div>
       
-      {/* Secondary Spotlight for Grid Reveal */}
       <div 
         className="absolute inset-0 z-0"
         style={{
