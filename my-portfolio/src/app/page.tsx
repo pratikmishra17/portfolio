@@ -1,239 +1,572 @@
-// src/app/page.tsx
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import AnimatedMain from './components/AnimatedMain';
+import React, { useState, useEffect, useRef } from 'react';
+import { 
+  Github, 
+  Linkedin, 
+  FileText, 
+  Mail, 
+  ExternalLink, 
+  Code2, 
+  Database, 
+  Terminal, 
+  Cpu, 
+  Award,
+  Briefcase,
+  GraduationCap,
+  ChevronDown,
+  Menu,
+  X
+} from 'lucide-react';
 
+const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: 'About', href: '#about' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Experience', href: '#experience' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Education', href: '#education' },
+  ];
+
+  return (
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800' : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex-shrink-0">
+            <a href="#" className="text-2xl font-bold text-zinc-100 tracking-tighter">
+              PM<span className="text-orange-500">.</span>
+            </a>
+          </div>
+          
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-8">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-zinc-400 hover:text-orange-500 px-3 py-2 text-sm font-medium transition-colors duration-300"
+                >
+                  {link.name}
+                </a>
+              ))}
+              <a 
+                href="#contact"
+                className="bg-zinc-100 hover:bg-white text-zinc-950 px-5 py-2 rounded-full text-sm font-bold transition-all transform hover:scale-105"
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-zinc-300 hover:text-white p-2"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {isMenuOpen && (
+        <div className="md:hidden bg-zinc-950 border-b border-zinc-800">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsMenuOpen(false)}
+                className="text-zinc-300 hover:text-orange-500 block px-3 py-2 rounded-md text-base font-medium"
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+};
+
+const Hero = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      if (containerRef.current) {
+        const rect = containerRef.current.getBoundingClientRect();
+        setMousePosition({
+          x: e.clientX - rect.left,
+          y: e.clientY - rect.top,
+        });
+      }
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
+  return (
+    <section 
+      id="about" 
+      ref={containerRef}
+      className="relative min-h-screen flex items-center justify-center bg-zinc-950 overflow-hidden pt-16"
+    >
+      {/* Static Grid Background */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `radial-gradient(#3f3f46 1px, transparent 1px)`,
+          backgroundSize: '24px 24px',
+          opacity: 0.2
+        }}
+      ></div>
+
+      {/* Interactive Spotlight Overlay */}
+      <div 
+        className="absolute inset-0 z-0 transition-opacity duration-300"
+        style={{
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(249, 115, 22, 0.06), transparent 40%)`,
+        }}
+      ></div>
+      
+      {/* Secondary Spotlight for Grid Reveal */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 255, 255, 0.03), transparent 40%)`,
+        }}
+      ></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+          
+          <div className="flex-1 space-y-8 text-center md:text-left animate-fade-in-up">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-500 text-xs font-medium uppercase tracking-wider">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+              </span>
+              Open to Opportunities
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold text-zinc-100 tracking-tight leading-tight">
+              Hello! I'm <span className="text-orange-500">Pratik</span>.
+            </h1>
+            
+            <div className="text-lg text-zinc-400 leading-relaxed max-w-3xl mx-auto md:mx-0 space-y-4 text-justify md:text-left">
+              <p>
+                I am a graduate student at <span className="text-zinc-200 font-medium">Cleveland State University</span> pursuing an MS in Software Engineering, where I am learning and deep diving into the areas of <span className="text-zinc-200 font-medium">Artificial Intelligence</span>, <span className="text-zinc-200 font-medium">Machine Learning</span> and building a strong understanding of how computers and software systems work.
+              </p>
+              <p>
+                I specialize in making responsive and interactive websites and web applications and have around 2 years of professional work experience as a <span className="text-zinc-200 font-medium">full stack developer</span> building and deploying production-ready and scalable microservices in the financial domain, using <span className="text-orange-500/90">Java, Springboot, Angular, Liferay, Javascript and SQL</span> with strong hands-on proficiency in Linux and git.
+              </p>
+              <p className="font-medium text-zinc-300 pt-2">
+                I am looking for Internships and full-time roles in AI/ML and Software Engineering. 
+                <a href="#contact" className="inline-block ml-2 text-orange-500 hover:text-orange-400 underline decoration-orange-500/30 hover:decoration-orange-500 transition-all font-bold animate-pulse">
+                  Hire me?
+                </a>
+              </p>
+            </div>
+            
+            <div className="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
+              <a 
+                href="/Pratik Mishra Resume.pdf" 
+                className="flex items-center gap-2 bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-700 transition-all hover:-translate-y-1 shadow-lg shadow-orange-900/20"
+              >
+                <FileText size={20} />
+                View Resume
+              </a>
+              <div className="flex gap-4">
+                <a 
+                  href="https://www.linkedin.com/in/pratik-mishraa/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-4 bg-zinc-900 text-zinc-400 border border-zinc-800 rounded-lg hover:text-white hover:border-zinc-600 transition-all"
+                >
+                  <Linkedin size={20} />
+                </a>
+                <a 
+                  href="https://github.com/pratikmishra17" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-4 bg-zinc-900 text-zinc-400 border border-zinc-800 rounded-lg hover:text-white hover:border-zinc-600 transition-all"
+                >
+                  <Github size={20} />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-zinc-600">
+          <ChevronDown size={24} />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const SkillCard = ({ title, skills, icon: Icon }) => (
+  <div className="bg-zinc-900 p-8 rounded-xl border border-zinc-800 hover:border-orange-500/30 transition-all duration-300 group h-full">
+    <div className="flex items-center justify-between mb-6">
+      <h3 className="text-lg font-bold text-zinc-100">{title}</h3>
+      <Icon className="text-zinc-600 group-hover:text-orange-500 transition-colors" size={24} />
+    </div>
+    <div className="flex flex-wrap gap-2">
+      {skills.map((skill) => (
+        <span 
+          key={skill} 
+          className="px-3 py-1 text-xs font-medium text-zinc-400 bg-zinc-950 rounded border border-zinc-800 group-hover:border-zinc-700 transition-colors"
+        >
+          {skill}
+        </span>
+      ))}
+    </div>
+  </div>
+);
+
+const Skills = () => {
+  const skillCategories = [
+    {
+      title: "Languages",
+      icon: Code2,
+      skills: ["Java", "Python", "JavaScript", "TypeScript", "SQL", "HTML5", "CSS"]
+    },
+    {
+      title: "Backend & Cloud",
+      icon: Terminal,
+      skills: ["Spring Boot", "Node.js", "REST APIs", "AWS", "Linux", "Shell Scripting", "Liferay DXP"]
+    },
+    {
+      title: "Frontend",
+      icon: ExternalLink,
+      skills: ["React.js", "Angular", "Tailwind CSS", "Bootstrap", "Chart.js"]
+    },
+    {
+      title: "AI & Data Science",
+      icon: Cpu,
+      skills: ["PyTorch", "Scikit-Learn", "Pandas", "NumPy", "Deep Learning", "Generative AI"]
+    },
+    {
+      title: "Database",
+      icon: Database,
+      skills: ["MySQL", "PostgreSQL", "MS-SQL", "Oracle DB", "Elasticsearch"]
+    },
+    {
+      title: "Tools",
+      icon: Briefcase,
+      skills: ["Git", "Maven", "Postman", "Jupyter", "VS Code"]
+    }
+  ];
+
+  return (
+    <section id="skills" className="py-24 bg-zinc-950 border-t border-zinc-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-zinc-100 mb-4">Technical Arsenal</h2>
+          <div className="h-1 w-20 bg-orange-500 rounded-full"></div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {skillCategories.map((category) => (
+            <SkillCard key={category.title} {...category} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const ExperienceItem = ({ role, company, duration, location, description, tags }) => (
+  <div className="group relative pl-8 md:pl-0 transition-all">
+    <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-zinc-800 transform -translate-x-1/2 group-last:bottom-auto group-last:h-full"></div>
+    
+    <div className="md:flex items-start justify-between gap-10 mb-16">
+      <div className="md:w-1/2 md:text-right">
+        <div className="md:pr-10">
+          <h3 className="text-2xl font-bold text-zinc-100 group-hover:text-orange-500 transition-colors">{company}</h3>
+          <div className="flex md:justify-end items-center gap-2 mt-1 mb-2 md:mb-0">
+             <Briefcase size={14} className="text-orange-500" />
+             <span className="text-zinc-400 text-sm font-medium">{role}</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="absolute left-0 md:left-1/2 w-3 h-3 bg-zinc-950 border-2 border-orange-500 rounded-full transform md:-translate-x-1/2 mt-2.5 z-10 shadow-[0_0_10px_rgba(249,115,22,0.5)]"></div>
+
+      <div className="md:w-1/2 md:pl-10 mt-4 md:mt-0">
+        <div className="flex items-center gap-4 mb-4 text-xs font-mono uppercase tracking-wider text-zinc-500">
+          <span>{duration}</span>
+          <span>•</span>
+          <span>{location}</span>
+        </div>
+        <ul className="space-y-3 mb-6">
+          {description.map((item, idx) => (
+            <li key={idx} className="text-zinc-400 text-sm leading-relaxed flex items-start gap-3">
+              <span className="mt-1.5 w-1 h-1 bg-zinc-600 rounded-full flex-shrink-0"></span>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <div className="flex flex-wrap gap-2">
+          {tags.map(tag => (
+            <span key={tag} className="text-xs text-zinc-500 bg-zinc-900 px-2 py-1 rounded border border-zinc-800">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+const Experience = () => {
+  return (
+    <section id="experience" className="py-24 bg-zinc-950 border-t border-zinc-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-zinc-100 mb-4">Experience</h2>
+          <div className="h-1 w-20 bg-orange-500 rounded-full"></div>
+        </div>
+        
+        <div className="max-w-5xl mx-auto">
+           <ExperienceItem 
+            role="Engineering Peer Teacher"
+            company="Cleveland State University"
+            duration="Aug 2025 - Present"
+            location="Cleveland, OH"
+            tags={["Teaching", "Statistics", "Leadership"]}
+            description={[
+              "Reinforcing complex statistical concepts for a class of 20+ graduate and undergraduate students.",
+              "Leading weekly recitation sessions and designing interactive presentations to boost engagement.",
+              "Mentoring students on academic success and core engineering principles."
+            ]}
+          />
+
+          <ExperienceItem 
+            role="Associate Systems Analyst"
+            company="NSEIT Ltd."
+            duration="Nov 2022 - Sept 2024"
+            location="Mumbai, India"
+            tags={["Java", "Spring Boot", "Microservices", "RHEL"]}
+            description={[
+              "Modernized legacy systems by developing Spring Boot microservices on RHEL, improving runtime efficiency by 75%.",
+              "Optimized frontend performance (Angular) and API architecture, reducing screen load times by 50% compared to previous Kibana implementations.",
+              "Led the migration of critical web services from AWS to on-premise infrastructure, resulting in a 70% reduction in operational costs.",
+              "Automated database maintenance and server tasks using Shell scripting and Cron jobs, reducing manual intervention by 60%."
+            ]}
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const ProjectCard = ({ title, description, techStack, links, accuracy }) => (
+  <div className="group bg-zinc-900 rounded-none border-l-2 border-zinc-800 hover:border-orange-500 transition-all duration-300 p-8 flex flex-col h-full hover:bg-zinc-800/50">
+    <div className="flex justify-between items-start mb-6">
+      <Code2 className="text-zinc-500 group-hover:text-orange-500 transition-colors" size={28} />
+      <div className="flex gap-4">
+        {links.demo && (
+          <a href={links.demo} target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-100 transition-colors">
+            <ExternalLink size={20} />
+          </a>
+        )}
+        {links.github && (
+          <a href={links.github} target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-zinc-100 transition-colors">
+            <Github size={20} />
+          </a>
+        )}
+      </div>
+    </div>
+    
+    <h3 className="text-xl font-bold text-zinc-100 mb-3 group-hover:text-orange-500 transition-colors">{title}</h3>
+    <p className="text-zinc-400 text-sm mb-6 flex-grow leading-relaxed">{description}</p>
+    
+    {accuracy && (
+      <div className="mb-6 px-3 py-2 bg-orange-500/10 border border-orange-500/20 rounded w-fit">
+        <p className="text-orange-500 text-xs font-bold font-mono">{accuracy}</p>
+      </div>
+    )}
+
+    <div className="pt-6 border-t border-zinc-800/50">
+      <div className="flex flex-wrap gap-3">
+        {techStack.map((tech) => (
+          <span key={tech} className="text-xs font-mono text-zinc-500 group-hover:text-zinc-300 transition-colors">
+            {tech}
+          </span>
+        ))}
+      </div>
+    </div>
+  </div>
+);
+
+const Projects = () => {
+  const projects = [
+    {
+      title: "Vehicle Insurance Fraud Detection",
+      description: "A comprehensive data visualization dashboard for fraud detection. Analyzed 15k+ records to compare performance across multiple ML algorithms.",
+      techStack: ["Python", "Streamlit", "Pandas", "Random Forest"],
+      accuracy: "92% Model Accuracy",
+      links: {
+        demo: "https://github.com/pratikmishra17/Fraud-Detection-Dashboard",
+        github: "https://github.com/pratikmishra17/Fraud-Detection-Dashboard"
+      }
+    },
+    {
+      title: "Deep Encoder-Decoder",
+      description: "Architected a custom CNN with dual encoders and a single decoder for advanced image denoising tasks. Validated on color image datasets.",
+      techStack: ["PyTorch", "Python", "CNN", "Matplotlib"],
+      links: {
+        demo: "https://github.com/pratikmishra17/encoder-decoder",
+        github: "https://github.com/pratikmishra17/encoder-decoder"
+      }
+    },
+    {
+      title: "AlexNet Implementation",
+      description: "Implementation of the AlexNet architecture for top-K distance-based image retrieval, demonstrating deep understanding of CNN structures.",
+      techStack: ["Python", "PyTorch", "NumPy"],
+      links: {
+        demo: "https://github.com/pratikmishra17/alexNet-implementation",
+        github: "https://github.com/pratikmishra17/alexNet-implementation"
+      }
+    },
+    {
+      title: "Personal Portfolio",
+      description: "A clean, high-performance portfolio website built with modern React patterns and Tailwind CSS. Features a responsive, industrial design.",
+      techStack: ["TypeScript", "React", "Tailwind CSS"],
+      links: {
+        demo: "https://pratikmishra.vercel.app/",
+        github: "https://github.com/pratikmishra17/portfolio"
+      }
+    }
+  ];
+
+  return (
+    <section id="projects" className="py-24 bg-zinc-950 border-t border-zinc-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-zinc-100 mb-4">Featured Projects</h2>
+          <div className="h-1 w-20 bg-orange-500 rounded-full"></div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {projects.map((project) => (
+            <ProjectCard key={project.title} {...project} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const EducationAndAchievements = () => {
+  return (
+    <section id="education" className="py-24 bg-zinc-950 border-t border-zinc-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          
+          <div>
+            <div className="flex items-center gap-3 mb-8">
+              <GraduationCap className="text-orange-500" size={28} />
+              <h2 className="text-2xl font-bold text-zinc-100">Education</h2>
+            </div>
+            
+            <div className="space-y-8 border-l border-zinc-800 ml-3 pl-8">
+              <div className="relative">
+                <div className="absolute -left-[38px] top-1.5 w-4 h-4 bg-zinc-950 border-2 border-zinc-700 rounded-full"></div>
+                <h3 className="text-lg font-bold text-zinc-100">Cleveland State University</h3>
+                <p className="text-orange-500 text-sm font-mono mb-2">2025 - 2026</p>
+                <p className="text-zinc-300 font-medium">MS in Software Engineering</p>
+                <p className="text-zinc-500 text-sm mt-1">GPA: 4.0</p>
+              </div>
+
+              <div className="relative">
+                <div className="absolute -left-[38px] top-1.5 w-4 h-4 bg-zinc-950 border-2 border-zinc-700 rounded-full"></div>
+                <h3 className="text-lg font-bold text-zinc-100">University of Mumbai</h3>
+                <p className="text-zinc-600 text-sm font-mono mb-2">2018 - 2022</p>
+                <p className="text-zinc-300 font-medium">BE in Information Technology</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div className="flex items-center gap-3 mb-8">
+              <Award className="text-orange-500" size={28} />
+              <h2 className="text-2xl font-bold text-zinc-100">Achievements</h2>
+            </div>
+            
+            <div className="grid grid-cols-1 gap-4">
+              {[
+                "2nd Place: NSEIT Tech Challenge (Fraud Detection System)",
+                "Google Certification: Generative AI Fundamentals",
+                "NSE Academy: Financial Markets (NCFM) Certified",
+                "Microsoft Excel Data Analysis Certified"
+              ].map((achievement, index) => (
+                <div key={index} className="bg-zinc-900 p-4 border-l-2 border-orange-500/50 hover:border-orange-500 hover:bg-zinc-800 transition-all flex items-center gap-4">
+                  <p className="text-zinc-300 text-sm font-medium">{achievement}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Footer = () => (
+  <footer id="contact" className="bg-zinc-950 border-t border-zinc-900 py-16">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 className="text-3xl font-bold text-zinc-100 mb-6">Ready to Collaborate?</h2>
+      <p className="text-zinc-400 mb-10 max-w-lg mx-auto">
+        I am currently open to internships and full-time roles in AI/ML and Software Engineering.
+      </p>
+      
+      <div className="flex justify-center gap-8 mb-12">
+        <a href="mailto:p.mishra23@vikes.csuohio.edu" className="text-zinc-500 hover:text-orange-500 transition-colors">
+          <Mail size={28} />
+        </a>
+        <a href="https://www.linkedin.com/in/pratik-mishraa/" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-orange-500 transition-colors">
+          <Linkedin size={28} />
+        </a>
+        <a href="https://github.com/pratikmishra17" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-orange-500 transition-colors">
+          <Github size={28} />
+        </a>
+      </div>
+      
+      <p className="text-zinc-700 text-sm">
+        © {new Date().getFullYear()} Pratik Mishra.
+      </p>
+    </div>
+  </footer>
+);
 
 export default function Home() {
   return (
-    <>
-
-      <main className="">
-        <section id="about" className="bg-gradient-to-b dark:bg-black from-sky-100 to-white py-20">
-
-          <div className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
-
-
-            <div className="">
-              <h2 className="text-2xl md:text-4xl font-bold mb-4 text-gray-900">
-                <span className="typewriting">Hello! I'm Pratik,</span>
-              </h2>
-              <p className="text-lg mb-6 text-gray-600">
-                I am a graduate student at Cleveland State University pursuing MS in Software Engineering where I am learning and deep diving
-                into the areas of Artificial Intelligence, Machine Learning and building a strong understanding of how computers and software systems work.
-                I specialize in making responsive and interactive webites and web applications and have around 2 years of professional work experience as a full stack developer building and deploying production ready and scalable microservices in the financial domain, using
-                Java, Springboot, Angular, Liferay, Javascript and SQL with strong hands-on proficiency in Linux and git.
-              </p>
-              <p className="text-lg mb-6 text-gray-600 ">
-                I am looking for Internships and full-time roles in AI/ML and Software Engineering.
-                <a href="#footer" className="underline-link ml-2 text-lg inline-block animate-bounce">Hire me?</a>
-
-
-              </p>
-
-              <div className="flex flex-wrap gap-4 mb-6">
-                <a href="/Pratik Mishra Software Engineering.pdf" className="bg-black text-white font-medium py-2 px-6 rounded-full shadow-md shadow-gray-500 hover:bg-white hover:text-black hover:shadow-none hover:inset-shadow-sm inset-shadow-black">
-                  View Resume
-                </a>
-                <a href="https://www.linkedin.com/in/pratik-mishraa/" target="_blank" className="bg-black text-white font-medium py-2 px-6 rounded-full shadow-md shadow-gray-500 hover:bg-white hover:text-black hover:shadow-none hover:inset-shadow-sm inset-shadow-black">
-                  View LinkedIn
-                </a>
-                <a href="https://github.com/pratikmishra17" target="_blank" className="bg-black text-white font-medium py-2 px-6 rounded-full shadow-md shadow-gray-500 hover:bg-white hover:text-black hover:shadow-none hover:inset-shadow-sm inset-shadow-black">
-                  View Github
-                </a>
-              </div>
-            </div>
-
-
-            {/* <div className="">
-              <div className="bg-white rounded-xl shadow-xl p-4 w-auto">
-                <img src="/photo.jpg" alt="Pratik Mishra" className="w-80 h-100" />
-              </div>
-            </div> */}
-
-          </div>
-        </section>
-        <section id="skills" className="py-20 bg-white">
-          <div className="max-w-screen-lg mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center text-black">Technical Skills</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-              <div className="bg-white shadow-lg shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none bg-white hover:inset-shadow-sm inset-shadow-gray-500 flex flex-col min-h-[200px]">
-                <h3 className="text-xl font-semibold text-black mb-4">Languages</h3>
-                <div className="flex flex-wrap gap-2">
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Java</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Python</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">JavaScript</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">TypeScript</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">SQL</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">HTML & CSS</span>
-                </div>
-              </div>
-              <div className="bg-white shadow-lg shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">
-                <h3 className="text-xl font-semibold text-black mb-2">Backend</h3>
-                <div className="flex flex-wrap gap-2">
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Springboot</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Liferay DXP</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">REST API</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Node.js</span>
-                </div>
-              </div>
-              <div className="bg-white shadow-lg shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">
-                <h3 className="text-xl font-semibold text-black mb-2">Frontend</h3>
-                <div className="flex flex-wrap gap-2">
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Angular</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">React.js</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Chart.js</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Tailwind CSS</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Bootstrap CSS</span>
-                </div>
-              </div>
-              <div className="bg-white shadow-lg shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500 flex flex-col min-h-[200px]">
-                <h3 className="text-xl font-semibold text-black mb-2">Database</h3>
-                <div className="flex flex-wrap gap-2">
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">MySQL</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">PostgreSQL</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">MS-SQL</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Oracle DB</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Elasticsearch</span>
-                </div>
-              </div>
-              <div className="bg-white shadow-lg shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">
-                <h3 className="text-xl font-semibold text-black mb-2">Libraries/Frameworks</h3>
-                <div className="flex flex-wrap gap-2">
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Java Collection Framework</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Sickit-learn</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Pytorch</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Pandas</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Numpy</span>
-                </div>
-              </div>
-              <div className="bg-white shadow-lg shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">
-                <h3 className="text-xl font-semibold text-black mb-2">DevOps/Cloud</h3>
-                <div className="flex flex-wrap gap-2">
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">AWS</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Linux servers</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Cron jobs</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Shell Scripting</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Git</span>
-                  <span className="text-md text-black px-2 py-1 bg-gray-300 rounded-lg p-6">Drupal</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="education" className="py-20 bg-white">
-          <div className="max-w-screen-lg mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center text-black">Education</h2>
-            <div>
-              <h3 className="text-xl font-semibold italic text-black mb-2">Cleveland State University - Cleveland, Ohio, USA</h3>
-              <h3 className="text-xxl font-semibold italic text-gray-600 mb-2">Master of Science in Software Engineering | Jan. 2025 - Dec. 2026 | GPA - 4.00</h3>
-              <h4 className="text-md italic text-gray-500 mb-2">Courses: Data Mining, Deep Learning and Machine Learning, Database Systems and Processes, Artificial Inteligence, Software Engineering, Project Management, Software Quality Assurance</h4>
-            </div>
-            <div className="py-8">
-              <h3 className="text-xl font-semibold italic text-black mb-2">University of Mumbai - Mumbai, Maharashtra, India</h3>
-              <h3 className="text-xxl font-semibold italic text-gray-600 mb-2">Bachelor of Engineering in Information Technology | Aug. 2018 - Jun. 2022</h3>
-              <h4 className="text-md italic text-gray-500 mb-2">Courses: Data Structures, Computer networks, Operating System, Cloud computing, Big Data Analysis</h4>
-            </div>
-          </div>
-        </section>
-        <section id="experience" className="py-20 bg-white">
-          <div className="max-w-screen-lg mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center text-black">Work Experience</h2>
-
-            <div className="pb-6">
-              <div className="flex justify-between">
-                <h3 className="text-xl font-semibold text-black">NSEIT Ltd.</h3>
-                <img src="/logo.jpg" alt="NSEIT Logo" className="w-20 h-8 object-contain" />
-              </div>
-              <div className='mb-4'>
-                <p className="text-lg text-gray-600">
-                  Software Developer (Java Full Stack)
-                </p>
-                <p className="text-sm text-gray-500">
-                  November 2022 - September 2024
-                </p>
-                <p className="text-sm text-gray-500">
-                  Mumbai, India
-                </p>
-              </div>
-              <div className='mb-4'>
-                <h4 className="text-sm text-black font-semibold mb-2">Tech Stack:</h4>
-                <div className="flex flex-wrap gap-2">
-                  <span className="text-xs text-black px-2 py-1 bg-white shadow-sm shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">Java</span>
-                  <span className="text-xs text-black px-2 py-1 bg-white shadow-sm shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">Springboot</span>
-                  <span className="text-xs text-black px-2 py-1 bg-white shadow-sm shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">Liferay</span>
-                  <span className="text-xs text-black px-2 py-1 bg-white shadow-sm shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">Javascript</span>
-                  <span className="text-xs text-black px-2 py-1 bg-white shadow-sm shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none hover:inset-shadow-sm inset-shadow-gray-500">SQL</span>
-                </div>
-              </div>
-              <h4 className="text-sm text-black font-semibold mb-2">Key Responsibilities:</h4>
-              <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                <li>
-                  Developed and deployed end-to-end Spring Boot microservice applications in UAT and production environments—leveraging Liferay DXP, PostgreSQL, and Linux—to modernize legacy systems and boost performance.
-                </li>
-                <li>
-                  Optimized Chart.js components to render real-time stock market data, achieving a 50% reduction in load times compared to Kibana and enhancing user experience.
-                </li>
-                <li>
-                  Streamlined API architecture to reduce database load by 40%, significantly improving system responsiveness.
-                </li>
-                <li>
-                  Collaborated with cross-functional teams to migrate critical web services from AWS to on-premise infrastructure, cutting operational costs by over 70% while ensuring data integrity and minimal downtime.
-                </li>
-                <li>
-                  Assisted in setting up and configuring a comprehensive content management system with Drupal, streamlining web content updates and reducing dependency on technical teams.
-                </li>
-                <li>
-                  Provided post go-live support to ensure high system availability and rapid resolution of production issues.
-                </li>
-              </ul>
-
-
-            </div>
-          </div>
-        </section>
-
-
-
-
-
-        {/* <section id="projects" className="py-20 bg-white">
-          <div className="max-w-screen-lg mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center text-black">My Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-              <div className="bg-white shadow-lg shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none bg-white hover:inset-shadow-sm inset-shadow-gray-500">
-                <h3 className="text-xl font-semibold text-black mb-2">Portfolio Website</h3>
-                <p className="text-gray-700 mb-4">Online web portfolio showcasing my skills, experience and projects</p>
-                <div className="flex space-x-2">
-                  <a href="https://pratikmishra.vercel.app/">
-                    <span className="bg-black text-sm text-white font-medium px-2 py-1 rounded-lg p-6 shadow-sm shadow-gray-500 hover:bg-white hover:text-black hover:shadow-none hover:inset-shadow-sm inset-shadow-black">Demo</span>
-                  </a>
-                  <a href="https://github.com/pratikmishra17/portfolio/tree/main/my-portfolio">
-                    <span className="bg-black text-sm text-white font-medium px-2 py-1 rounded-lg p-6 shadow-md shadow-gray-500 hover:bg-white hover:text-black hover:shadow-none hover:inset-shadow-sm inset-shadow-black">Code</span>
-                  </a>
-                </div>
-              </div>
-              <div className="bg-white shadow-lg shadow-gray-500/50 rounded-lg p-6 transition-all duration-300 ease-in-out group hover:shadow-none bg-white hover:inset-shadow-sm inset-shadow-gray-500">
-                <h3 className="text-xl font-semibold text-black mb-2">Portfolio Website</h3>
-                <p className="text-gray-700 mb-4">Online web portfolio showcasing my skills, experience and projects</p>
-                <div className="flex space-x-2">
-                  <a href="https://pratikmishra.vercel.app/">
-                    <span className="bg-black text-sm text-white font-medium px-2 py-1 rounded-lg p-6 shadow-sm shadow-gray-500 hover:bg-white hover:text-black hover:shadow-none hover:inset-shadow-sm inset-shadow-black">Demo</span>
-                  </a>
-                  <a href="https://github.com/pratikmishra17/portfolio/tree/main/my-portfolio">
-                    <span className="bg-black text-sm text-white font-medium px-2 py-1 rounded-lg p-6 shadow-md shadow-gray-500 hover:bg-white hover:text-black hover:shadow-none hover:inset-shadow-sm inset-shadow-black">Code</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> */}
-
-
+    <div className="bg-zinc-950 min-h-screen text-zinc-200 selection:bg-orange-500/30 selection:text-orange-100">
+      <Navbar />
+      <main>
+        <Hero />
+        <Skills />
+        <Experience />
+        <Projects />
+        <EducationAndAchievements />
       </main>
-    </>
+      <Footer />
+    </div>
   );
 }
