@@ -16,7 +16,8 @@ import {
   GraduationCap,
   ChevronDown,
   Menu,
-  X
+  X,
+  LucideIcon
 } from 'lucide-react';
 
 const Navbar = () => {
@@ -104,10 +105,10 @@ const Navbar = () => {
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       if (containerRef.current) {
         const rect = containerRef.current.getBoundingClientRect();
         setMousePosition({
@@ -219,7 +220,13 @@ const Hero = () => {
   );
 };
 
-const SkillCard = ({ title, skills, icon: Icon }) => (
+interface SkillCardProps {
+  title: string;
+  skills: string[];
+  icon: LucideIcon;
+}
+
+const SkillCard = ({ title, skills, icon: Icon }: SkillCardProps) => (
   <div className="bg-zinc-900 p-8 rounded-xl border border-zinc-800 hover:border-orange-500/30 transition-all duration-300 group h-full">
     <div className="flex items-center justify-between mb-6">
       <h3 className="text-lg font-bold text-zinc-100">{title}</h3>
@@ -289,7 +296,16 @@ const Skills = () => {
   );
 };
 
-const ExperienceItem = ({ role, company, duration, location, description, tags }) => (
+interface ExperienceItemProps {
+  role: string;
+  company: string;
+  duration: string;
+  location: string;
+  description: string[];
+  tags: string[];
+}
+
+const ExperienceItem = ({ role, company, duration, location, description, tags }: ExperienceItemProps) => (
   <div className="group relative pl-8 md:pl-0 transition-all">
     <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-zinc-800 transform -translate-x-1/2 group-last:bottom-auto group-last:h-full"></div>
     
@@ -374,7 +390,18 @@ const Experience = () => {
   );
 };
 
-const ProjectCard = ({ title, description, techStack, links, accuracy }) => (
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  techStack: string[];
+  links: {
+    demo: string;
+    github: string;
+  };
+  accuracy?: string;
+}
+
+const ProjectCard = ({ title, description, techStack, links, accuracy }: ProjectCardProps) => (
   <div className="group bg-zinc-900 rounded-none border-l-2 border-zinc-800 hover:border-orange-500 transition-all duration-300 p-8 flex flex-col h-full hover:bg-zinc-800/50">
     <div className="flex justify-between items-start mb-6">
       <Code2 className="text-zinc-500 group-hover:text-orange-500 transition-colors" size={28} />
